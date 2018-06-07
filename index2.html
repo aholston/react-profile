@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- REACT LIBRARY -->
+    <script src="https://unpkg.com/react@15.5.4/dist/react.js"></script>
+    <!-- REACT DOM LIBRARY -->
+    <script src="https://unpkg.com/react-dom@15.5.4/dist/react-dom.js"></script>
+    <!-- BABEL LIBRARY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+
+    <title>FriendLy</title>
+  </head>
+  <body>
+
+    <div id='app'>React has not rendered yet!</div>
+
+    <script type='text/babel'>
+
+
+
+      // FriendLy Complex Component
+      function FriendLy(props) {
+        var friendlyStyle = {
+          display: 'inline-block',
+          margin: 20,
+          height: 300,
+          width: 225,
+          padding: 0,
+          backgroundColor: '#fff',
+          WebkitFilter: 'drop-shadow(0px 0px 5px #555)',
+          filter: 'drop-shadow(0px 0px 5px #555)'
+        }
+        return(
+          <div style={friendlyStyle}>
+            <Avatar img={props.img}/>
+            <UserName name={props.name}/>
+            <GetConnected/>
+          </div>
+        )
+      }
+      // Avatar Component
+      function Avatar(props) {
+        var avatarStyle = {
+          marginLeft: 27,
+          marginTop: 20,
+          width: 150,
+          height: 150,
+          borderRadius: '50%'
+        }
+        return(
+          <img style={avatarStyle} src={props.img}/>
+        )
+      }
+
+      // UserName Component
+      function UserName(props) {
+        var nameStyle = {
+          fontSize: 24,
+          fontFamily: 'Arial, Helvetica, sans-serif',
+          textAlign: 'center',
+          margin: 20
+        }
+        return(
+          <h1 style={nameStyle}>{props.name}</h1>
+        )
+      }
+
+      // GetConnected Complex Component
+      function GetConnected() {
+        var getConnectedStyle = {
+          marginLeft: 15
+        }
+        return(
+          <div style={getConnectedStyle}>
+            <Like/>
+            <Share/>
+            <Add/>
+          </div>
+        )
+      }
+
+      var iconStyle = {
+        margin: 20
+      }
+        // Like Component
+        function Like() {
+          return(
+            <i style={iconStyle} className="far fa-thumbs-up"></i>
+
+
+          )
+        }
+
+        // Share Component
+        function Share() {
+          return(
+            <i style={iconStyle} className="far fa-share-square"></i>
+
+
+          )
+        }
+
+        // Add Component
+        function Add() {
+
+          return(
+            <i style={iconStyle} className="far fa-plus-square"></i>
+
+
+          )
+        }
+
+        ReactDOM.render(
+          <div>
+            <FriendLy
+            name='Andre H'
+            img='https://media.licdn.com/dms/image/C4E03AQE1lKhHu0jL0A/profile-displayphoto-shrink_200_200/0?e=1533168000&v=beta&t=afgETBTn2N8UaMi3cIXI-jNrnQB7JE5KE0TlRneSnJU'
+            />
+            <FriendLy
+            name='Brittany W'
+            img='https://media.licdn.com/dms/image/C5603AQH8DqG-8pN8yg/profile-displayphoto-shrink_800_800/0?e=1533772800&v=beta&t=hdIjGE_5l_vmwmfXXqkBi05paWBEdYpWwwRrIHEcUfI'
+            />
+            <FriendLy
+            name='Ashwin V'
+            img='https://media.licdn.com/dms/image/C4E03AQEg-dlea-9vlg/profile-displayphoto-shrink_800_800/0?e=1533772800&v=beta&t=jATAZDPNARG-OwJ_jPDufYm7JOgZP8jDrkXBBxWXiAo'
+            />
+            <FriendLy
+            name='Jibran N'
+            img='https://media.licdn.com/dms/image/C4E03AQHNLFy_7CCKBQ/profile-displayphoto-shrink_800_800/0?e=1533772800&v=beta&t=3wW977pvGV2RVOBqGHqHPmT6V2ft1ASbi19Q01p8NBI'
+            />
+            <FriendLy
+            name='Matt T'
+            img='https://media.licdn.com/dms/image/C4E03AQEjJt0nFt8kQA/profile-displayphoto-shrink_800_800/0?e=1533772800&v=beta&t=gKme477p36VvH6m5nqKEhJv2j-HbbRjoRe8dHNvu-jM'
+            />
+            <FriendLy
+            name='Grace J'
+            img='https://media.licdn.com/dms/image/C4D03AQHVAu_ZZaWSDw/profile-displayphoto-shrink_800_800/0?e=1533772800&v=beta&t=i6nXxmlQmadWoKCaLG6AxsmofjovebI78xuq5U9gXSA'
+            />
+            <FriendLy
+            name='Anna K'
+            img='https://media.licdn.com/dms/image/C4E03AQFSUYktbipnKg/profile-displayphoto-shrink_800_800/0?e=1533772800&v=beta&t=FpFuFBoIt5d5X22L8Fr8-T_lv-xnBYdFTcwIbYa-e5Q'
+            />
+            <FriendLy
+            name='Alish S'
+            img='https://media.licdn.com/dms/image/C4E03AQEj-RouKoYonA/profile-displayphoto-shrink_800_800/0?e=1533772800&v=beta&t=0-1aJ83YyFIFOdhQybs0Gvy5YaE_cN6g1PB6CB1KocM'
+            />
+            <FriendLy
+            name='Chris M'
+            img='https://media.licdn.com/dms/image/C5103AQHOzMFuN0BIjA/profile-displayphoto-shrink_800_800/0?e=1533772800&v=beta&t=ARtzNcvpm8_7a2aC_Vl-a9BFaQUnqOzE1S4U3gKKmrQ'
+            />
+            <FriendLy
+            name='Staci R'
+            img='https://media.licdn.com/dms/image/C5603AQGtPHKSjEE4_A/profile-displayphoto-shrink_800_800/0?e=1533772800&v=beta&t=9RUwJXL02HrOvcCzyr025CF4l3kXwsXDani4OQOUPtg'
+            />
+          </div>,
+          document.getElementById('app')
+        );
+
+
+
+
+
+    </script>
+
+  </body>
+</html>
